@@ -128,6 +128,6 @@ export async function getStaticProps(context) {
       hrefLang,
       footerMenu,
     },
-    revalidate: 60,
+    revalidate: 1,
   };
 }
