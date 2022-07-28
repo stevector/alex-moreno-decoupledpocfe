@@ -92,7 +92,6 @@ export async function getServerSideProps(context) {
         multiLanguage,
         footerMenu,
       },
-      revalidate: 2,
     };
   } catch (error) {
     console.error("Unable to fetch data for article page: ", error);
