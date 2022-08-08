@@ -12,6 +12,7 @@ export default function Header() {
             ["🏠 Home", "/"],
             ["📰 Articles", "/articles"],
             ["📑 Pages", "/pages"],
+            ["📑 Drupalcon", "/examples/landing/drupalcon"],
           ].map(([title, href]) => (
             <li className={`${href === "/" ? "mr-auto" : "mx-4"}`} key={href}>
               <Link className="font-sans" href={href}>
