@@ -8,8 +8,6 @@ import Link from "next/link";
 
 export default function LandingSSRExample({
   menues,
-  articles,
-  multiLanguage,
 }) {
   return (
     
