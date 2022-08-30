@@ -8,7 +8,8 @@ import {
   globalDrupalStateStores,
 } from "../../lib/drupalStateContext";
 
-import Article from "../../components/article.js";
+
+import Article from "../../components/articledcon.js";
 import Layout from "../../components/layout";
 
 export default function ArticleTemplate({ article, hrefLang, footerMenu }) {
@@ -128,6 +129,6 @@ export async function getStaticProps(context) {
       hrefLang,
       footerMenu,
     },
-    revalidate: 60,
+    revalidate: 1,
   };
 }

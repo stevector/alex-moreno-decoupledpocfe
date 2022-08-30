@@ -1,5 +1,6 @@
 # @pantheon-systems/next-drupal-starter
 
+<<<<<<< HEAD
 ## 3.0.0
 
 ### Major Changes
@@ -29,6 +30,8 @@
 
 - e73d956: [next-drupal-starter] Added snapshot tests for each page route
 
+=======
+>>>>>>> bootstrap
 ## 2.0.2
 
 ### Patch Changes

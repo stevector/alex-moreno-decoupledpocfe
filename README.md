@@ -73,7 +73,6 @@ Full documentation can be found at: https://github.com/pantheon-systems/decouple
 The `pages/recipes` directory can be safely removed if you are using a Drupal instance that does not
 source the Umami demo data
 
-
 For a guide on creating your first Next Drupal customization, see [Your First Drupal Customization](https://github.com/pantheon-systems/decoupled-kit-js/blob/canary/web/docs/Frontend%20Starters/Next%20Drupal/your-first-customization.md)
 
 ## Tests
@@ -89,13 +88,11 @@ See our [Backend Starters](https://github.com/pantheon-systems/decoupled-kit-js/
 ### Commands
 
 This section assumes the package manager in use is `npm`. If you are not using `npm`, replace `npm` with the name of your package manager.
-
 To run the tests for both profiles sequentially:
 
 ```bash
 npm test
 ```
-
 
 To run the test for a single profile:
 
@@ -105,21 +102,3 @@ npm run test:umami
 # tests against the default profile data
 npm run test:default
 ```
-
-### Updating Snapshots
-
-Snapshots should be updated when presentational changes are made.
-If a new page route is added, create a new snapshot test for it, and include any data needed to run that test successfully.
-Please commit the updated snapshots along with your changes.
-
-To update a snapshot:
-
-Run the following helper command:
-
-```bash
-npm run update-snapshots
-```
-
-Or, run the test for a single profile in watch mode (see above), then in the terminal press the **u** key.
-This will update the snapshot for the running profile
-Be sure to update the snapshot for both profiles.
