@@ -1,5 +1,6 @@
+import { describe, it, expect, } from "vitest";
 import { getPaths } from "../lib/getPaths";
-import { globalDrupalStateStores } from "../lib/stores";
+import { globalDrupalStateStores } from "../lib/drupalStateContext";
 
 import umamiPaths from "./data/umamiPaths.json";
 import defaultProfilePaths from "./data/defaultProfilePaths.json";

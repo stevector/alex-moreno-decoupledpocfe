@@ -1,5 +1,6 @@
+import { describe, it, expect } from "vitest";
 import { getPreview } from "../lib/getPreview";
-import { globalDrupalStateAuthStores } from "../lib/stores";
+import { globalDrupalStateAuthStores } from "../lib/drupalStateContext";
 
 import umamiPreview from "./data/umamiPreview.json";
 import defaultProfilePreview from "./data/defaultProfilePreview.json";

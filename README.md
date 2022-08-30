@@ -73,14 +73,14 @@ Full documentation can be found at: https://github.com/pantheon-systems/decouple
 The `pages/recipes` directory can be safely removed if you are using a Drupal instance that does not
 source the Umami demo data
 
-For a guide on creating your first Next Drupal customization, see [Your First Drupal Customization](https://github.com/pantheon-systems/decoupled-kit-js/blob/canary/web/docs/Frontend%20Starters/Next.js/Next.js%20%2B%20Drupal/your-first-customization.md)
+
+For a guide on creating your first Next Drupal customization, see [Your First Drupal Customization](https://github.com/pantheon-systems/decoupled-kit-js/blob/canary/web/docs/Frontend%20Starters/Next%20Drupal/your-first-customization.md)
 
 ## Tests
 
-Tests are written with [`vitest`](https://vitest.dev/). All new functionality should have unit tests or snapshot tests where applicable.
-Snapshot tests are using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/).
+Tests are written with [`vitest`](https://vitest.dev/). All new functionality should have unit tests or snapshot tests where applicable.`
 
-Any fetch calls should be mocked with [`msw`](https://mswjs.io/docs/basics/request-matching) in [setupFile.js](./__tests__/setupFile.js).
+Any fetch calls should be mocked with [`msw`](https://mswjs.io/docs/basics/request-matching) in [setupFile.js](./__tests__/setupFile.js)
 
 There are two data profiles to test against: the [Umami profile](https://www.drupal.org/project/pantheon_decoupled_umami_demo) and the [Default profile](https://www.drupal.org/project/pantheon_decoupled).
 These profiles are available as Drupal modules and contain data to render the frontend with.
@@ -90,13 +90,14 @@ See our [Backend Starters](https://github.com/pantheon-systems/decoupled-kit-js/
 
 This section assumes the package manager in use is `npm`. If you are not using `npm`, replace `npm` with the name of your package manager.
 
-To run all tests for both profiles sequentially:
+To run the tests for both profiles sequentially:
 
 ```bash
 npm test
 ```
 
-To run the tests for a single profile in watch mode:
+
+To run the test for a single profile:
 
 ```bash
 # test against the umami profile data

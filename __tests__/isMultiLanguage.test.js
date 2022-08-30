@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { isMultiLanguage } from "../lib/isMultiLanguage";
 
 describe("isMultiLanguage()", () => {

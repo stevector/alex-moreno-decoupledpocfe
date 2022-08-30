@@ -1,7 +1,6 @@
-import { globalDrupalStateAuthStores } from "../../lib/stores";
+import { globalDrupalStateAuthStores } from "../../lib/drupalStateContext";
 
 const preview = async (req, res) => {
-
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
   if (req.query.secret !== process.env.PREVIEW_SECRET || !req.query.slug) {
@@ -23,8 +22,6 @@ const preview = async (req, res) => {
       path: req.query.slug,
     });
   } catch (error) {
-    process.env.DEBUG_MODE &&
-      console.error("Error verifying preview content: ", error);
     return res.redirect("/500");
   }
 
@@ -50,7 +47,11 @@ const preview = async (req, res) => {
   }
 
   // Redirect to the path from the fetched content
-  res.redirect(content.path.alias);
+  res.redirect(
+    objectName === "node--page"
+      ? `/${content.path.langcode}/pages/${content.path.alias}`
+      : content.path.alias
+  );
 };
 
 export default preview;
