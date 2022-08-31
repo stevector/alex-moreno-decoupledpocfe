@@ -37,8 +37,6 @@ export default function LandingSSRExample({
       </div>
     </div>
   </div>
-  
-
 
 
   <ArticleGrid

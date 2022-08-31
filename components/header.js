@@ -1,8 +1,7 @@
-import Link from "next/link";
-
 import { useRouter } from "next/router";
 
 export default function Header() {
+  
   const router = useRouter();
 
   return (
@@ -19,6 +18,7 @@ export default function Header() {
       <li><a href="/articles" class="nav-link px-2 link-dark">Articles</a></li>
       <li><a href="/pages" class="nav-link px-2 link-dark">Pages</a></li>
       <li><a href="/examples" class="nav-link px-2 link-dark">Examples</a></li>
+      <li><a href="/examples/landing/drupalcon" class="nav-link px-2 link-dark">Drupalcon</a></li>
     </ul>
 
     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
