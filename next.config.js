@@ -3,8 +3,6 @@ const getLocales = require("./scripts/get-locales");
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
-
-
 // Load the .env file for local development
 // .env.development.local by default
 require("dotenv").config({
