@@ -26,7 +26,7 @@ export default function Article({ imgSrc, title, body }) {
     >
       <Image
         priority
-        src={IMAGE_URL + imgSrc}
+        src="{IMAGE_URL + imgSrc}"
         layout="fill"
         objectFit="cover"
         alt={title}
@@ -37,10 +37,7 @@ export default function Article({ imgSrc, title, body }) {
 </div>
 
 
-
-
       </article>
-
       </div>
 
 

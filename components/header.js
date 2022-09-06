@@ -49,16 +49,7 @@ export default function Header() {
     <div className="dropdown text-end">
     <Link passHref href="#">
       <a className="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      <Image
-        priority
-        src="https://github.com/mdo.png"
-        layout="fill"
-        objectFit="cover"
-        alt="mdo"
-        width="32" 
-        height="32" 
-        className="rounded-circle"
-      />
+
       </a>
       </Link>  
 

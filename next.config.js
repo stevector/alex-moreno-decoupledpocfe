@@ -41,9 +41,9 @@ module.exports = async () => {
       // makes locales available to lib/drupalStateContext.js
       locales: locales,
     },
-    reactStrictMode: true,
+    reactStrictMode: false,
     images: {
-      domains: [imageDomain],
+      domains: [imageDomain, 'res.cloudinary.com'],
     },
     i18n: {
       locales: locales,

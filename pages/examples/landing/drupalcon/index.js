@@ -20,16 +20,12 @@ export default function LandingSSRExample({
 
     <Layout >
 
-
-
 <div className="container col-xxl-8 px-4 py-5">
     <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div className="col-10 col-sm-8 col-lg-6">
       <Image
-              priority
               src="/bootstrap-themes.png"
               className="d-block mx-lg-auto img-fluid"
-              layout="fill"
               objectFit="cover"
               width="700" 
               height="500" 
@@ -73,7 +69,9 @@ export default function LandingSSRExample({
                 img:{node.img} {node.img}
                 </div>
                 <div className="col-auto d-none d-lg-block">
-                  <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <svg className="bd-placeholder-img" 
+                  width="200" height="250" xmlns="http://www.w3.org/2000/svg" 
+                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
                     <rect width="100%" height="100%" fill="#55595c"/>
                     <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
