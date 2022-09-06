@@ -9,7 +9,6 @@ export default function Article({ imgSrc, title, body }) {
     <div className="col-md-8">
 
 
-    
       <article className="prose lg:prose-xl mt-10 mx-auto">
 
 

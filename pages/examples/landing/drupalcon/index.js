@@ -51,7 +51,7 @@ export default function LandingSSRExample({
 
     {articles ? (
             articles?.map((node) => (
-              <div className="col-md-6">
+              <div key={node.nid} className="col-md-6">
 
                 <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div className="col p-4 d-flex flex-column position-static">
