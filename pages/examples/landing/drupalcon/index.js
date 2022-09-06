@@ -3,18 +3,22 @@ import Image from "next/image";
 import { isMultiLanguage } from "../../../../lib/isMultiLanguage.js";
 
 import Layout from "../../../../components/layout";
-import PageHeader from "../../../../components/page-header.js";
 import Link from "next/link";
 
 import { ArticleGridItem, withGrid } from "../../../../components/grid";
-
+import {
+  getCurrentLocaleStore,
+  globalDrupalStateStores,
+} from "../../../../lib/stores";
 
 export default function LandingSSRExample({
   menues,
   articles,
   multiLanguage,
+  articlesStored,
 }) {
   const ArticleGrid = withGrid(ArticleGridItem);
+  //const imgSrc = node?.field_media_image?.field_media_image?.uri?.url || "";
 
   return (
 
@@ -45,45 +49,15 @@ export default function LandingSSRExample({
 
   <div className="row mb-2">
 
-    {articles ? (
-            articles?.map((node) => (
-              <div key={node.nid} className="col-md-6">
 
-                <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div className="col p-4 d-flex flex-column position-static">
-                  <strong className="d-inline-block mb-2 text-primary">World</strong>
-                  <h3 className="mb-0">{node.title}</h3>
-                  <div className="mb-1 text-muted">Nov 12</div>
-                  <p className="card-text mb-auto">{node.body.summary}</p>
-                  <div dangerouslySetInnerHTML={{ __html: node.body?.summary }} />
-                  <Link
-                  passHref
-                  href={`${
-                    multiLanguage ? `/${node.path?.langcode || locale}` : ""
-                  }${node.path.alias.includes("/articles") ? "" : "/articles"}${
-                    node.path.alias
-                  }`}
-                >
-                  <a className="font-normal underline">Read more →</a>
-                </Link>
-                img:{node.img} {node.img}
-                </div>
-                <div className="col-auto d-none d-lg-block">
-                  <svg className="bd-placeholder-img" 
-                  width="200" height="250" xmlns="http://www.w3.org/2000/svg" 
-                  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c"/>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-        
-                </div>
-              </div>
-            </div>
+  <ArticleGrid
+            data={articlesStored}
+            contentType="articles"
+            multiLanguage={multiLanguage}
+          />
 
-            ))
-          ) : (
-            <h2 className="text-xl text-center mt-14">No pages found 🏜</h2>
-          )}
+
+Articles 2
           
           </div>
 
@@ -110,6 +84,17 @@ export async function getServerSideProps(context) {
       context
     );
 
+    const store = getCurrentLocaleStore(
+      context.locale,
+      globalDrupalStateStores
+    );
+    const articlesStored = await store.getObject({
+      objectName: "node--article",
+      params: "include=field_media_image.field_media_image",
+      refresh: true,
+      res: context.res,
+    });
+
     // Fetch menues.
     const menues = await drupal.getMenu("main");
 
@@ -118,6 +103,7 @@ export async function getServerSideProps(context) {
         menues,
         articles,
         multiLanguage,
+        articlesStored,
       },
     };
   } catch (error) {

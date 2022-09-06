@@ -21,23 +21,12 @@ export default function HomepageTemplate({
         Welcome to{" "}
         <a
           className="text-blue-600 no-underline hover:underline"
-          href="https://nextjs.org"
-        >
-          Next.js!
+          href="https://events.drupal.org/prague2022">
+          DrupalCon
         </a>
       </h1>
 
-      <div className="text-2xl">
-        <div className="bg-black text-white rounded flex items-center justify-center p-4">
-          Decoupled Drupal on{" "}
-          <Image
-            src="/pantheon.png"
-            alt="Pantheon Logo"
-            width={191}
-            height={60}
-          />
-        </div>
-      </div>
+
     </div>
   );
 
