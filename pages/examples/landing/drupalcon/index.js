@@ -38,8 +38,8 @@ export default function LandingSSRExample({
             />
       </div>
       <div className="col-lg-6">
-        <h1 className="display-5 fw-bold lh-1 mb-3">Introducing Decoupled for Drupalcon Prague 2022</h1>
-        <p className="lead">Pantheon is proud to present one of the most advanced, and easy to use, decoupled solutions in the market. We call it webops for a reason</p>
+        <h1 className="display-5 fw-bold lh-1 mb-3">Introducing Front-End Sites at Drupalcon Prague 2022</h1>
+        <p className="lead">Pantheon is proud to present one of the most advanced, and easy to use, decoupled solutions in the market. We call it WebOps for a reason</p>
         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
           <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Read more</button>
         </div>
